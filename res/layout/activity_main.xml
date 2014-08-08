@@ -8,18 +8,42 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="57dp"
+        android:layout_marginTop="82dp"
         android:text="Button" />
+
+    <Button
+        android:id="@+id/to_urltest"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="图片" />
+
+    <Button
+        android:id="@+id/to_browser"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/to_urltest"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="网页" />
+
+    <Button
+        android:id="@+id/to_js_call"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/to_browser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="javaScript" />
 
 </RelativeLayout>

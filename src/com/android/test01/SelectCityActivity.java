@@ -16,6 +16,9 @@ public class SelectCityActivity extends Activity {
 			{"太原","吕梁","运城"},
 			{"海淀","中关村"}
 	};
+	/**
+	 * 确认区域
+	 */
 	private Button bn;
 
 	@Override

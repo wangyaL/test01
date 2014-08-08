@@ -30,6 +30,21 @@
             android:name="com.android.test01.SelectCityActivity"
             android:label="@string/title_activity_select_city" >
         </activity>
+        <activity
+            android:name="com.android.test01.URLTestActivity"
+            android:label="@string/title_activity_urltest" >
+        </activity>
+        <activity
+            android:name="com.android.test01.MiniBrowser"
+            android:label="@string/title_activity_mini_browser" >
+        </activity>
+        <activity
+            android:name="com.android.webview.JsCallAndroid"
+            android:label="@string/title_activity_js_call_android" >
+        </activity>
     </application>
+
+    <!-- 授权访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

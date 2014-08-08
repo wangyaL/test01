@@ -1,0 +1,114 @@
+<html>
+<head>
+<script type="text/javascript">
+	function myFunction() {
+		var flag = true;
+		var result = "";
+		var divNum = document.getElementsByTagName("div");
+		for (var i = 1; i <= divNum.length; i++) {
+			var x = document.getElementById("div" + i).getElementsByTagName(
+					"input");
+			if (x.length > 0) {
+				result += "<>" + x[0].value + ":";
+				var temp = 0;
+				for (var j = 1; j < x.length; j++) {
+					if (x[j].checked) {
+						temp++;
+						result += x[j].value + ";";
+					}
+				}
+				if (temp == 0) {
+					flag = false;
+				}
+			}
+			var y = document.getElementById("div" + i).getElementsByTagName(
+					"textarea");
+			if (y.length > 0) {
+				if (y[1].value.trim() == "") {
+					flag = false;
+				}
+				result += "<>" + y[0].value + ":" + y[1].value.trim() + ";";
+			}
+		}
+		if (flag == true) {
+			android.js(result);
+		} else {
+			alert('您还没有回答哦！');
+		}
+	}
+</script>
+</head>
+<body>
+	<p style='text-align: center; font-size: 20px;'>小区服务调查</p>
+	<p style="font-size: 16px; line-height: 2em; margin-left: 10px">请务必真实回答，我们会针对你的回答给予回应</p>
+	<div id="div1">
+		<p>
+			<input type="hidden" value="34">
+		</p>
+		<p style="line-height: 2em; margin-left: 10px">
+			<span style="font-size: 16px"><font id="f1">1</font>、小区环境</span>
+		</p>
+		<p style="line-height: 2em; margin-left: 20px">
+			<input type="radio" name="radio_1" value="countA"><span
+				style="font-size: 16px">&nbsp;A、很干净，非常满意</span>
+		</p>
+		<p style="line-height: 2em; margin-left: 20px">
+			<input type="radio" name="radio_1" value="countB"><span
+				style="font-size: 16px">&nbsp;B、干净，满意</span>
+		</p>
+		<p style="line-height: 2em; margin-left: 20px">
+			<input type="radio" name="radio_1" value="countC"><span
+				style="font-size: 16px">&nbsp;C、一般，不是很理想</span>
+		</p>
+		<p style="line-height: 2em; margin-left: 20px">
+			<input type="radio" name="radio_1" value="countD"><span
+				style="font-size: 16px">&nbsp;D、不干净，希望可以改进</span>
+		</p>
+	</div>
+	<div id="div2">
+		<p>
+			<input type="hidden" value="35">
+		</p>
+		<p style="line-height: 2em; margin-left: 10px">
+			<span style="font-size: 16px;"><font id="f2">2</font>、对小区内物业人员有什么要求（多选）</span>
+		</p>
+		<p style="line-height: 2em; margin-left: 20px">
+			<input type="checkbox" value="countA"><span
+				style="font-size: 16px">&nbsp;A、垃圾箱内垃圾即时回收</span>
+		</p>
+		<p style="line-height: 2em; margin-left: 20px">
+			<input type="checkbox" value="countB"><span
+				style="font-size: 16px">&nbsp;B、水电费价格调整</span>
+		</p>
+		<p style="line-height: 2em; margin-left: 20px">
+			<input type="checkbox" value="countC"><span
+				style="font-size: 16px">&nbsp;C、加强防盗安全</span>
+		</p>
+		<p style="line-height: 2em; margin-left: 20px">
+			<input type="checkbox" value="countD"><span
+				style="font-size: 16px">&nbsp;D、多多举办小区内活动</span>
+		</p>
+	</div>
+	<div id="div3">
+		<p>
+			<textarea style="display: none; width: 100px; height: 30px">36</textarea>
+		</p>
+		<p style="line-height: 2em; margin-left: 10px">
+			<span style="font-size: 16px"><font id="f3">3</font>、自由发挥，可以从各方面对物业进行评价、建议</span>
+		</p>
+		<table style="margin-left: 20px">
+			<tbody>
+				<tr>
+					<td><span style="font-size: 16px">回答：</span></td>
+					<td><span style="font-size: 16px;"><textarea cols='25'
+								rows='5'></textarea></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<p style="text-align: center">
+		<input type="button" onclick="myFunction()" value="提    交"
+			style="width: 100%; background: blue; font-size: 20px; color: white" />
+	</p>
+</body>
+</html>
